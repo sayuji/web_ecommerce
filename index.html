@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbhak Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body style="overflow-y: hidden;">
+    <div class="container">
+        <header>
+            <h1>Starbhak Mart</h1>
+        </header>
+        <div class="kotak">
+            <div class="kiri">
+                <select class="">
+                    <option>Take Away</option>
+                    <option>Dine in</option>
+                </select>
+                <button class="dua">
+                    <span class="material-symbols-outlined" style="color: black !important; font-size: 16px; ">
+                        face
+                    </span>Warung Mang Jaya
+                </button>
+                <div class="belanja" id="cart">
+
+                </div>
+                <div class="jajan">
+                    <table width="100%" cellspacing="0">
+                        <tr>
+                            <td width="70%" style="padding-left: 10px;">Discount : </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 10px;">Tax : </td>
+                            <td>Rp. <span id="tax">0</span></td>
+                        </tr>
+                        <tr class="pay">
+                            <td style="padding-left: 10px;">Total Amount : </td>
+                            <td>Rp. <span id="total">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="kanan">
+                <nav>
+                    <div class="nav_kiri">
+                        <p>Item List</p>
+                    </div>
+                    <div class="nav_kanan">
+                        <button class="btn">
+                            <i class='bx bx-search bx-sm'></i>
+                        </button>
+                        <button class="btn">
+                            <i class='bx bx-menu bx-sm'></i>
+                        </button>
+                        <button class="btn">
+                            <i class='bx bx-sort-alt-2 bx-sm'></i>
+                        </button>
+                    </div>
+                </nav>
+
+                <section>
+                    <div class="isi" onclick="addToCart({nama:'Sushi', harga: '35000', id: '1'})">
+                        <div class="foto">
+                            <img src="img/sushi.jpeg" alt="">
+                        </div>
+                        <p>Sushi</p>
+                        <h1>Rp. 35.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Hamburger', harga: '25000', id: '2'})">
+                        <div class="foto">
+                            <img src="img/Burger.jpeg" alt="">
+                        </div>
+                        <p>Hamburger</p>
+                        <h1>Rp. 25.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Kentang Goreng', harga: '15000', id: '3'})">
+                        <div class="foto">
+                            <img src="img/kentang goreng.jpeg" alt="">
+                        </div>
+                        <p>Kentang</p>
+                        <h1>Rp. 15.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Pizza', harga: '30000', id: '4'})">
+                        <div class="foto">
+                            <img src="img/Pizza.jpeg" alt="">
+                        </div>
+                        <p>Pizza</p>
+                        <h1>Rp. 30.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Spicy Ramen', harga: '20000', id: '5'})">
+                        <div class="foto">
+                            <img src="img/Spicy ramen.jpeg" alt="">
+                        </div>
+                        <p>Spicy Ramen</p>
+                        <h1>Rp. 20.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Steak', harga: '40000', id: '6'})">
+                        <div class="foto">
+                            <img src="img/Steak.jpeg" alt="">
+                        </div>
+                        <p>Steak</p>
+                        <h1>Rp. 40.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Pempek', harga: '15000', id: '7'})">
+                        <div class="foto">
+                            <img src="img/Pempek.jpeg" alt="">
+                        </div>
+                        <p>Pempek</p>
+                        <h1>Rp. 15.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Nasi Padang', harga: '20000', id: '8'})">
+                        <div class="foto">
+                            <img src="img/Nasi Padang.jpeg" alt="">
+                        </div>
+                        <p>Nasi Padang </p>
+                        <h1>Rp. 20.000</h1>
+                    </div>
+                    <div class="isi" onclick="addToCart({nama:'Nasi Padang', harga: '20000', id: '7'})">
+                        <div class="foto">
+                            <img src="img/Nasi Padang.jpeg" alt="">
+                        </div>
+                        <p>Nasi Padang </p>
+                        <h1>Rp. 20.000</h1>
+                    </div>
+                </section>
+                <div class="payment">
+                    <h4>Payment</h4>
+                    <div class="ctrl">
+                        <i class='bx bx-save bx-sm'>CTRL+P</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="status">
+            <p>
+                <marquee behavior="" direction="">Ready - Starbhak Mart menyediakan berbagai banyak makanan yang siapdinikmati.</marquee>
+            </p>
+        </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>

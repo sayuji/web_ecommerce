@@ -44,3 +44,7 @@ function deleteCard(dataid) {
         $('#card-'+dataid).remove()   
     }
 }
+
+function printbtn() {
+    window.print();
+}

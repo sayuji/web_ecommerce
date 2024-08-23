@@ -45,6 +45,31 @@ function deleteCard(dataid) {
     }
 }
 
+function filterItems() {
+    var input, filter, section, isi, p, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    section = document.querySelector(".kanan section");
+    isi = section.getElementsByClassName("isi");
+
+    for (i = 0; i < isi.length; i++) {
+        p = isi[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            isi[i].style.display = "";
+        } else {
+            isi[i].style.display = "none";
+        }
+    }
+}
+
+document.getElementById("search-btn").addEventListener("click", filterItems);
+
+
 function printbtn() {
+    var originalContents = document.body.innerHTML;
+    var printContents = $('.kiri').html();
+    document.body.innerHTML = printContents
     window.print();
+    document.body.innerHTML = originalContents;
 }
